@@ -1,0 +1,96 @@
+<style>
+
+	.title {
+		font-weight: bold;
+	}
+
+</style>
+
+<h1>References</h1>
+
+<input id="searchInput" type="text" placeholder="search" oninput="onInput()"/>
+<div class="reference">
+	<div class="title">EU Strategy towards the Eradication of Trafficking in Human Beings (2012-2016)</div>
+	<div class="publisher">European Commission</div>
+	<div class="year">2012</div>
+	<div class="abstract">On 19 June 2012, the European Commission adopted the "EU Strategy towards the Eradication of Trafficking in Human Beings (2012-2016)”.
+	The Strategy is a set of concrete and practical measures to be implemented over the next five years.
+	It is based on five key priorities:
+	 ¤ Identifying, protecting and assisting victims of trafficking;
+	 ¤ Stepping up the prevention of trafficking in human beings;
+	 ¤ Increased prosecution of traffickers;
+	 ¤ Enhanced coordination and cooperation among key actors and policy coherence;
+	 ¤ Increased knowledge of and effective response to emerging concerns related to all forms of trafficking in human beings.
+	</div>
+	<div class="languages">All EU  languages</div>
+	<div class="thematic">Policy & Legislation</div>
+	<div class="type">Publication</div>
+	<div class="link"></div>
+</div>
+<div class="reference">
+	<div class="title">Directive 2011/36/EU of the European Parliament and the Council on preventing and combating trafficking in human beings and protecting its victims</div>
+	<div class="publisher">Official Journal of the European Union</div>
+	<div class="year">2011</div>
+	<div class="abstract">This directive represents a critical step in the EU efforts in addressing human trafficking comprehensively.  It establishes common standards for the prevention of trafficking in human beings and for the protection of victims, adopting a human-right based approach.
+	The directive also contains practical measures to be implemented in the EU member stats, such as the appointment of a national coordinator and establishment of national rapporteur (or equivalent mechanism).
+	</div>
+	<div class="languages">Bulgarian, Croatian, Czech, Danish, Dutch, English, Estonian, Finnish, French, German, Greek, Hungarian, Irish, Italian, Latvian, Lithuanian, Maltese, Polish, Portuguese, Romanian, Slovak, Slovenian, Spanish, Swedish</div>
+	<div class="thematic">Policy & Legislation</div>
+	<div class="type">Legislation</div>
+	<div class="link"></div>
+</div>
+
+<script>
+
+	var searchInput = document.getElementById('searchInput');
+	var references = [].slice.call(document.getElementsByClassName('reference'));
+
+	function onInput () {
+
+		var words = searchInput.value.toLowerCase().split(' ');
+
+		references.map(function (reference) {
+
+			var visible = true;
+
+			if (words && words.length) {
+
+				var title = reference.getElementsByClassName('title')[0].innerHTML.toLowerCase();
+				var publisher = reference.getElementsByClassName('publisher')[0].innerHTML.toLowerCase();
+				var year = reference.getElementsByClassName('year')[0].innerHTML.toLowerCase();
+				var abstract = reference.getElementsByClassName('abstract')[0].innerHTML.toLowerCase();
+				var languages = reference.getElementsByClassName('languages')[0].innerHTML.toLowerCase();
+				var thematic = reference.getElementsByClassName('thematic')[0].innerHTML.toLowerCase();
+				var type = reference.getElementsByClassName('type')[0].innerHTML.toLowerCase();
+				var link = reference.getElementsByClassName('link')[0].innerHTML.toLowerCase();
+
+				var i = 0;
+				while (visible && i < words.length) {
+
+					visible = search(words[i], title) || search(words[i], publisher) || search(words[i], year) || search(words[i], abstract) || search(words[i], languages) || search(words[i], thematic) || search(words[i], type) || search(words[i], link);
+
+					i++;
+
+				}
+
+			}
+
+			if (visible) {
+				reference.style.display = 'block';
+			} else {
+				reference.style.display = 'none';
+			}
+
+		})
+
+	}
+
+	function search (needle, haystack) {
+		return simpleSearch(needle, haystack);
+	}
+
+	function simpleSearch (needle, haystack) {
+		return haystack.indexOf(needle) !== -1;
+	}
+
+</script>
