@@ -8,7 +8,25 @@
 
 <h1>References</h1>
 
-<input id="searchInput" type="text" placeholder="search" oninput="onInput()"/>
+<input id="queryInput" type="text" placeholder="search" oninput="onInput(this.value)"/>
+<select id="typeSelectInput" onchange="onSelectType(this)">
+	<option value="Type:">Type:</option>
+	<option value="Training manual">Training manual</option>
+	<option value="Publication">Publication</option>
+	<option value="Video">Video</option>
+	<option value="Guidelines">Guidelines</option>
+	<option value="Movie">Movie</option>
+	<option value="Manual / Handbook">Manual / Handbook</option>
+</select>
+<select id="thematicSelectInput" onchange="onSelectThematic(this)">
+	<option value="Thematic:">Thematic:</option>
+	<option value="Unaccompanied Migrant Children & Trafficking">Unaccompanied Migrant Children & Trafficking</option>
+	<option value="Policy & Legislation">Policy & Legislation</option>
+	<option value="Prevention, Protection and Assistance">Prevention, Protection and Assistance</option>
+	<option value="Law enforcement">Law enforcement</option>
+	<option value="Coordination & Cooperation (NRMs - TRMs)">Coordination & Cooperation (NRMs - TRMs)</option>
+	<option value="Manual / Handbook">Manual / Handbook</option>
+</select>
 <div class="reference">
 	<div class="title">EU Strategy towards the Eradication of Trafficking in Human Beings (2012-2016)</div>
 	<div class="publisher">European Commission</div>
@@ -42,12 +60,39 @@
 
 <script>
 
-	var searchInput = document.getElementById('searchInput');
+	var queryInput = document.getElementById('queryInput');
+	var queryInput = document.getElementById('queryInput');
 	var references = [].slice.call(document.getElementsByClassName('reference'));
 
-	function onInput () {
+	function onSelectType (typeSelectInput) {
 
-		var words = searchInput.value.toLowerCase().split(' ');
+		if (typeSelectInput.selectedIndex !== 0) {
+
+			var query = typeSelectInput.value;
+			queryInput.value = query;
+			onInput(query);
+			typeSelectInput.selectedIndex = 0;
+
+		}
+
+	}
+
+	function onSelectThematic (thematicSelectInput) {
+
+		if (thematicSelectInput.selectedIndex !== 0) {
+
+			var query = thematicSelectInput.value;
+			queryInput.value = query;
+			onInput(query);
+			thematicSelectInput.selectedIndex = 0;
+
+		}
+
+	}
+
+	function onInput (query) {
+
+		var words = query.toLowerCase().split(' ');
 
 		references.map(function (reference) {
 
