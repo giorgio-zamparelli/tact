@@ -33,6 +33,15 @@
 			});
 		});
 
+		function showModal (id) {
+			console.log(document.getElementById(id))
+			document.getElementById(id).classList.add('modal-open');
+		}
+
+		function hideModal (id) {
+			document.getElementById(id).classList.remove('modal-open');
+		}
+
 	</script>
 
 	<link href="./main.css" media="all" rel="stylesheet" type="text/css">
@@ -49,7 +58,7 @@
 					<div style="font-size:21px;">Transnational referral mechanism Model</div>
 					<div style="height:3px;background-color:#0b69aa;margin:10px 0 0 0;"></div>
 					<div style="display:flex;font-size:21px;text-align:center;">
-						<a class="menu-button" href="./" style="color: #0b69aa;text-decoration:underline;">HOME</a>
+						<a class="menu-button" href="./index.html" style="color: #0b69aa;text-decoration:underline;">HOME</a>
 						<a class="menu-button" href="./about-trm.html" >ABOUT TRM</a>
 						<a class="menu-button" href="./ct-directory.html" >CT DIRECTORY</a>
 						<a class="menu-button" href="./tools.html" >TOOLS</a>
@@ -84,7 +93,7 @@
 					<div style="min-width:400px;max-width:700px;margin:0 20px;border: 4px solid transparent;border-radius:15px;border-color:white;padding:0 20px;text-align:center;">
 						<div class="flex justify-content-center" style="height:100px;font-size:56px;"><i class="icon-bell align-self-center"></i></div>
 						<div class="separator-horizontal"></div>
-						<div style="line-height:60px;">A person <a href="#VictimOfTrafficking" name="VictimOfTraffickingLink" class="open-modal">victim of trafficking</a> ( VoT ) is <a href="#identified" name="identifiedLink" class="open-modal">identified</a></div>
+						<div style="line-height:60px;">A person <a onclick="showModal('VictimOfTrafficking')')" name="VictimOfTraffickingLink" class="open-modal">victim of trafficking</a> ( VoT ) is <a onclick="showModal('identified')" name="identifiedLink" class="open-modal">identified</a></div>
 					</div>
 				</div>
 
@@ -92,11 +101,11 @@
 
 					<div style="width:50%;display: table-cell;vertical-align:top;border-style:solid;border-color:white;border-width:0 3px 0 0;text-align:right;">
 
-						<div style="display:inline-block;background-color:white;color:#4d4d4d;padding:22px;margin: 140px 20px 0 0;"><a href="#how" name="howLink" class="open-modal">How</a> to identify a VoT ?</div>
+						<div style="display:inline-block;background-color:white;color:#4d4d4d;padding:22px;margin: 140px 20px 0 0;"><a onclick="showModal('how')" name="howLink" class="open-modal">How</a> to identify a VoT ?</div>
 
 					</div>
 					<div style="width:50%;display: table-cell;vertical-align:top;border-style:solid;border-color:white;border-width:0 0 0 3px;">
-						<div style="display:inline-block;background-color:white;color:#4d4d4d;padding:22px;margin: 360px 0 222px 20px;"><a href="#who" name="whoLink" class="open-modal">Who</a> can identify a VoT ?</div>
+						<div style="display:inline-block;background-color:white;color:#4d4d4d;padding:22px;margin: 360px 0 222px 20px;"><a onclick="showModal('who')" name="whoLink" class="open-modal">Who</a> can identify a VoT ?</div>
 					</div>
 				</div>
 
@@ -164,7 +173,7 @@
 					<div style="border: 4px solid transparent;border-radius:15px;border-color:white;padding:0 20px;text-align:center;">
 						<div class="flex justify-content-center" style="height:100px;font-size:56px;"><i class="icon-directions align-self-center"></i></div>
 						<div class="separator-horizontal"></div>
-						<div style="padding:20px 0;">She/he is oriented to the <a href="#NationalReferralMechanism" name="NationalReferralMechanismLink" class="open-modal">National Referral Mechanism</a> (NRM)<br>in the country of destination and informed about options<br>to <a href="#makeAnInformedDecision" name="makeAnInformedDecisionLink" class="open-modal">make an informed decision</a></div>
+						<div style="padding:20px 0;">She/he is oriented to the <a onclick="showModal('NationalReferralMechanism')" name="NationalReferralMechanismLink" class="open-modal">National Referral Mechanism</a> (NRM)<br>in the country of destination and informed about options<br>to <a onclick="showModal('makeAnInformedDecision')" name="makeAnInformedDecisionLink" class="open-modal">make an informed decision</a></div>
 					</div>
 				</div>
 
@@ -256,7 +265,7 @@
 					<div style="min-width:400px;max-width:700px;margin:0 20px;border: 4px solid transparent;border-radius:15px;border-color:white;padding:0 20px;text-align:center;">
 						<div class="flex justify-content-center" style="height:100px;font-size:64px;"><i class="icon-chat align-self-center"></i></div>
 						<div class="separator-horizontal"></div>
-						<div style="padding:20px 0;">The VoT is <a href="#madeAware" name="madeAwareLink" class="open-modal">made aware</a> of the assistance available in the country<br>of return and <a href="#reintegrationOpportunities" name="reintegrationOpportunitiesLink" class="open-modal">reintegration opportunities</a></div>
+						<div style="padding:20px 0;">The VoT is <a onclick="showModal('madeAware')" name="madeAwareLink" class="open-modal">made aware</a> of the assistance available in the country<br>of return and <a onclick="showModal('reintegrationOpportunities')" name="reintegrationOpportunitiesLink" class="open-modal">reintegration opportunities</a></div>
 					</div>
 				</div>
 
@@ -268,7 +277,7 @@
 					<div style="min-width:400px;max-width:700px;margin:0 20px;border: 4px solid transparent;border-radius:15px;border-color:white;padding:0 20px;text-align:center;">
 						<div class="flex justify-content-center" style="height:100px;font-size:64px;"><i class="icon-gears align-self-center"></i></div>
 						<div class="separator-horizontal"></div>
-						<div style="padding:20px 0;">A <a href="#risk" name="riskLink" class="open-modal">risk</a> and <a href="#needs" name="needsLink" class="open-modal">needs</a> assessment is <a href="#performed" name="performedLink" class="open-modal">performed </a> to prepare the assistance upon return</div>
+						<div style="padding:20px 0;">A <a onclick="showModal('risk')" name="riskLink" class="open-modal">risk</a> and <a onclick="showModal('needs')" name="needsLink" class="open-modal">needs</a> assessment is <a onclick="showModal('performed')" name="performedLink" class="open-modal">performed </a> to prepare the assistance upon return</div>
 					</div>
 				</div>
 
@@ -277,9 +286,9 @@
 					<div style="width:50%;display: table-cell;vertical-align:top;border-style:solid;border-color:white;border-width:0 3px 0 0;text-align:right;">
 
 						<div style="margin: 40px 20px 60px 0;display:inline-block;text-align:left;border-style:solid;color:white;">
-							<div style="padding:20px;">In case the victim is<br>an <a href="#unaccompaniedChild" name="unaccompaniedChildLink" class="open-modal">unaccompanied child</a></div>
+							<div style="padding:20px;">In case the victim is<br>an <a onclick="showModal('unaccompaniedChild')" name="unaccompaniedChildLink" class="open-modal">unaccompanied child</a></div>
 							<div style="height:3px;width:100%;background-color:white;"></div>
-							<div style="padding:20px;font-size:21px;">- <a href="#familyTracingAndAssessment" name="familyTracingAndAssessmentLink" class="open-modal">Family Tracing and Assessment</a><br>- <a href="#BestInterestDetermination" name="BestInterestDeterminationLink" class="open-modal">Best interest assessment and determination</a><br>&nbsp;&nbsp;&nbsp;by competent authority</div>
+							<div style="padding:20px;font-size:21px;">- <a onclick="showModal('familyTracingAndAssessment')" name="familyTracingAndAssessmentLink" class="open-modal">Family Tracing and Assessment</a><br>- <a onclick="showModal('BestInterestDetermination')" name="BestInterestDeterminationLink" class="open-modal">Best interest assessment and determination</a><br>&nbsp;&nbsp;&nbsp;by competent authority</div>
 						</div>
 
 					</div>
@@ -287,7 +296,7 @@
 
 						<div style="margin: 0 0 0 20px;display:inline-block;">
 							<div style="text-align:center;font-size:12px;color:white;">|<br>|<br>|<br>|<br>|<br>|</div>
-							<div style="display:inline-block;background-color:white;color:#4d4d4d;padding:22px;">The VoT decides to <a href="#stayInTheCountryOfDestination" name="stayInTheCountryOfDestinationLink" class="open-modal">stay in the<br>country of destination</a></div>
+							<div style="display:inline-block;background-color:white;color:#4d4d4d;padding:22px;">The VoT decides to <a onclick="showModal('stayInTheCountryOfDestination')" name="stayInTheCountryOfDestinationLink" class="open-modal">stay in the<br>country of destination</a></div>
 							<div style="margin: 0 auto;height:2px;width:104px;background-color:white;margin-top:10px;"></div>
 						</div>
 					</div>
@@ -380,7 +389,7 @@
 					<div style="min-width:400px;max-width:700px;margin:0 20px;border: 4px solid transparent;border-radius:15px;border-color:white;padding:0 20px;text-align:center;">
 						<div class="flex justify-content-center" style="height:100px;font-size:56px;"><i class="icon-phone align-self-center"></i></div>
 						<div class="separator-horizontal"></div>
-						<div style="line-height:60px;"><a href="#ContactDetailsAreShared" name="ContactDetailsAreSharedLink" class="open-modal">Contact details are shared</a></div>
+						<div style="line-height:60px;"><a onclick="showModal('ContactDetailsAreShared')" name="ContactDetailsAreSharedLink" class="open-modal">Contact details are shared</a></div>
 					</div>
 				</div>
 
@@ -392,7 +401,7 @@
 					<div style="min-width:400px;max-width:700px;margin:0 20px;border: 4px solid transparent;border-radius:15px;border-color:white;padding:0 20px;text-align:center;">
 						<div class="flex justify-content-center" style="height:100px;font-size:56px;"><i class="icon-airplane align-self-center"></i></div>
 						<div class="separator-horizontal"></div>
-						<div style="padding:20px 0;"><a href="#travelToCountryOfOrigin" name="travelToCountryOfOriginLink" class="open-modal">Travel to country of origin</a> is jointly organized by the two NRM<br>stakeholders and the VoT</div>
+						<div style="padding:20px 0;"><a onclick="showModal('travelToCountryOfOrigin')" name="travelToCountryOfOriginLink" class="open-modal">Travel to country of origin</a> is jointly organized by the two NRM<br>stakeholders and the VoT</div>
 					</div>
 				</div>
 
@@ -464,7 +473,7 @@
 					<div style="min-width:400px;max-width:700px;margin:0 20px;border: 4px solid transparent;border-radius:15px;border-color:white;padding:0 20px;text-align:center;">
 						<div class="flex justify-content-center" style="height:100px;font-size:64px;"><i class="icon-handshake align-self-center"></i></div>
 						<div class="separator-horizontal"></div>
-						<div style="padding:20px 0;">The VoT is met <a href="#atTheAirport" name="atTheAirportLink" class="open-modal">at the airport</a> and<br>his/her <a href="#immediateNeeds" name="immediateNeedsLink" class="open-modal">immediate needs</a> are addressed</div>
+						<div style="padding:20px 0;">The VoT is met <a onclick="showModal('atTheAirport')" name="atTheAirportLink" class="open-modal">at the airport</a> and<br>his/her <a onclick="showModal('immediateNeeds')" name="immediateNeedsLink" class="open-modal">immediate needs</a> are addressed</div>
 					</div>
 				</div>
 
@@ -518,7 +527,7 @@
 					<div style="min-width:400px;max-width:700px;margin:0 20px;border: 4px solid transparent;border-radius:15px;border-color:white;padding:0 20px;text-align:center;">
 						<div class="flex justify-content-center" style="height:100px;font-size:56px;"><i class="icon-gears align-self-center"></i></div>
 						<div class="separator-horizontal"></div>
-						<div style="padding:20px 0;">A reintegration plan is <a href="#established" name="establishedLink" class="open-modal">established</a> according to individual needs<br>and <a href="#availableOpportunities" name="availableOpportunitiesLink" class="open-modal">available opportunities</a></div>
+						<div style="padding:20px 0;">A reintegration plan is <a onclick="showModal('established')" name="establishedLink" class="open-modal">established</a> according to individual needs<br>and <a onclick="showModal('availableOpportunities')" name="availableOpportunitiesLink" class="open-modal">available opportunities</a></div>
 					</div>
 				</div>
 
@@ -587,7 +596,7 @@
 						<td style="width:222px;display:table-cell;vertical-align:top;background-color:white;padding:22px;">
 
 							<div class="flex justify-content-center" style="font-size:56px;margin-bottom:11px;"><i class="icon-balance align-self-center"></i></div>
-							<div style="text-align:center;"><a href="#AccessToJustice" name="AccessToJusticeLink" class="open-modal">ACCESS TO JUSTICE</a></div>
+							<div style="text-align:center;"><a onclick="showModal('AccessToJustice')" name="AccessToJusticeLink" class="open-modal">ACCESS TO JUSTICE</a></div>
 							<div style="height:2px;width:100%;background-color:#4d4d4d;margin:11px 0;"></div>
 							<div>- Legal counselling</div>
 							<div>- Lawyer fees</div>
@@ -660,10 +669,10 @@
 
 	<div id="VictimOfTrafficking" class="modal">
 
-		<a href="#VictimOfTraffickingLink" class="background"></a>
+		<a onclick="hideModal('VictimOfTrafficking')" class="background"></a>
 
 		<div>
-			<a href="#VictimOfTraffickingLink" title="close" class="close">&times;</a>
+			<a onclick="hideModal('VictimOfTrafficking')" title="close" class="close">&times;</a>
 			<h2>Victim of trafficking</h2>
 			<p>Human trafficking is comprised of three main elements:</p>
 			<p>ACTION: the recruitment, transportation, transfer, harboring, or receipt of persons</p>
@@ -677,10 +686,10 @@
 
 	<div id="identified" class="modal">
 
-		<a href="#identifiedLink" class="background"></a>
+		<a onclick="hideModal('identified')" class="background"></a>
 
 		<div>
-			<a href="#identifiedLink" title="close" class="close">&times;</a>
+			<a onclick="hideModal('identified')" title="close" class="close">&times;</a>
 			<h2>Identified</h2>
 			<p>There is no universally established list of indicators, usually each country uses its own grid. In the framework of a TRM, a common list of indicators should be established in the framework of bilateral / multilateral agreement(s). Examples of lists used by different countries or institutions are available in the tools and resources tabs.</p>
 			<p>Attention: Training of frontline actors (law enforcement, health professionals, NGOs, etc.) is essential to allow efficient and early identification of VoTs.</p>
@@ -690,10 +699,10 @@
 
 	<div id="who" class="modal">
 
-		<a href="#whoLink" class="background"></a>
+		<a onclick="hideModal('who')" class="background"></a>
 
 		<div>
-			<a href="#whoLink" title="close" class="close">&times;</a>
+			<a onclick="hideModal('who')" title="close" class="close">&times;</a>
 			<h2>Who</h2>
 			<p>Identification can be made by (list is not exhaustive):</p>
 			<p>- NGOs (specialized or not)</br>
@@ -713,10 +722,10 @@
 
 	<div id="how" class="modal">
 
-		<a href="#howLink" class="background"></a>
+		<a onclick="hideModal('how')" class="background"></a>
 
 		<div>
-			<a href="#howLink" title="close" class="close">&times;</a>
+			<a onclick="hideModal('how')" title="close" class="close">&times;</a>
 			<h2>How?</h2>
 			<p>General indicators.</p>
 			<p>Victims of human trafficking may:</p>
@@ -757,10 +766,10 @@
 
 	<div id="NationalReferralMechanism" class="modal">
 
-		<a href="#NationalReferralMechanismLink" class="background"></a>
+		<a onclick="hideModal('NationalReferralMechanism')" class="background"></a>
 
 		<div>
-			<a href="#NationalReferralMechanismLink" title="close" class="close">&times;</a>
+			<a onclick="hideModal('NationalReferralMechanism')" title="close" class="close">&times;</a>
 			<h2>National Referral Mechanism</h2>
 			<p>A National Referral Mechanism (NRM) is a co-operative framework through which state actors fulfil their obligations to protect and promote the human rights of trafficked persons, co-ordinating their efforts in a strategic partnership with civil society. (OSCE)</p>
 			<p>Through the NRM, VoTs are provided with (list non-exhaustive): </br>
@@ -777,10 +786,10 @@
 
 	<div id="makeAnInformedDecision" class="modal">
 
-		<a href="#makeAnInformedDecisionLink" class="background"></a>
+		<a onclick="hideModal('makeAnInformedDecision')" class="background"></a>
 
 		<div>
-			<a href="#makeAnInformedDecisionLink" title="close" class="close">&times;</a>
+			<a onclick="hideModal('makeAnInformedDecision')" title="close" class="close">&times;</a>
 			<h2>Make an informed decision</h2>
 			<p>During the reflection period (from 30 to 60 days after identification) the VoT assesses his/her personal situation. S/he should be informed about his/her right to make an informed decision on whether s/he wants to stay in the country of destination or to return to his/her country of orgin (or residence).</p>
 			<p>Attention: It is important to adapt a victim-centered approach and to encourage contacts (for example through video-conference) with NRM stakeholders in the country of return in order to mitigate the expectations if the victim chooses to return. </p>
@@ -790,10 +799,10 @@
 
 	<div id="stayInTheCountryOfDestination" class="modal">
 
-		<a href="#stayInTheCountryOfDestinationLink" class="background"></a>
+		<a onclick="hideModal('stayInTheCountryOfDestination')" class="background"></a>
 
 		<div>
-			<a href="#stayInTheCountryOfDestinationLink" title="close" class="close">&times;</a>
+			<a onclick="hideModal('stayInTheCountryOfDestination')" title="close" class="close">&times;</a>
 			<h2>Stay in country of destination</h2>
 			<p>The victim requests a residence permit or seeks asylum and is accompanied by NRM stakeholders in his/her integration path in the country of destination. S/he is accompanied in his/her judiciary procedure and to get access to compensation.</p>
 		</div>
@@ -802,10 +811,10 @@
 
 	<div id="countryOfResidence" class="modal">
 
-		<a href="#countryOfResidenceLink" class="background"></a>
+		<a onclick="hideModal('countryOfResidence')" class="background"></a>
 
 		<div>
-			<a href="#countryOfResidenceLink" title="close" class="close">&times;</a>
+			<a onclick="hideModal('countryOfResidence')" title="close" class="close">&times;</a>
 			<h2>country of residence</h2>
 			<p>The return can take place to any country where the beneficiary has the right to stay legally.</p>
 		</div>
@@ -814,10 +823,10 @@
 
 	<div id="madeAware" class="modal">
 
-		<a href="#madeAwareLink" class="background"></a>
+		<a onclick="hideModal('madeAware')" class="background"></a>
 
 		<div>
-			<a href="#madeAwareLink" title="close" class="close">&times;</a>
+			<a onclick="hideModal('madeAware')" title="close" class="close">&times;</a>
 			<h2>Made aware</h2>
 			<p>Information is provided by the return counsellor in the CoD  and NRM stakeholders in the country of return. When possible, videoconferences should be organized to discuss about expectations and realistic options in the country of return.</p>
 		</div>
@@ -826,10 +835,10 @@
 
 	<div id="reintegrationOpportunities" class="modal">
 
-		<a href="#reintegrationOpportunitiesLink" class="background"></a>
+		<a onclick="hideModal('reintegrationOpportunities')" class="background"></a>
 
 		<div>
-			<a href="#reintegrationOpportunitiesLink" title="close" class="close">&times;</a>
+			<a onclick="hideModal('reintegrationOpportunities')" title="close" class="close">&times;</a>
 			<h2>Reintegration opportunities</h2>
 			<p>Reintegration opportunities vary depending on the country of return and programmes available locally.  Comprehensive reintegration programmes may include access to health/medical check-up, accommodation, psychosocial support, legal assistance, education or vocational training and assistance to set up an income generating activity.</p>
 		</div>
@@ -838,10 +847,10 @@
 
 	<div id="risk" class="modal">
 
-		<a href="#riskLink" class="background"></a>
+		<a onclick="hideModal('risk')" class="background"></a>
 
 		<div>
-			<a href="#riskLink" title="close" class="close">&times;</a>
+			<a onclick="hideModal('risk')" title="close" class="close">&times;</a>
 			<h2>Risk</h2>
 			<p>The risk assessment covers both internal factors (linked to the personal situation of the victim, for example involvement of family members in the recruitement process) and external factors (such as push factors in country/region of origin)</p>
 			<p>If the evaluation determines that the case is at high-risk, a risk mitigation plan should be elaborated (a standard form used by IOM is available in the tools tab).</p>
@@ -851,10 +860,10 @@
 
 	<div id="needs" class="modal">
 
-		<a href="#needsLink" class="background"></a>
+		<a onclick="hideModal('needs')" class="background"></a>
 
 		<div>
-			<a href="#needsLink" title="close" class="close">&times;</a>
+			<a onclick="hideModal('needs')" title="close" class="close">&times;</a>
 			<h2>Needs</h2>
 			<p>Victims of trafficking can have very different and various needs, which greatly vary from a person to another. These needs can be (list is not exhaustive):</br>
 			- health needs</br>
@@ -869,10 +878,10 @@
 
 	<div id="performed" class="modal">
 
-		<a href="#performedLink" class="background"></a>
+		<a onclick="hideModal('performed')" class="background"></a>
 
 		<div>
-			<a href="#performedLink" title="close" class="close">&times;</a>
+			<a onclick="hideModal('performed')" title="close" class="close">&times;</a>
 			<h2>Performed</h2>
 			<p>The risk and needs assessment must be performed by a multidisciplinary team which should include stakeholders of the NRMs in CoD and in CoO. It allows preparing the assistance upon arrival.</p>
 		</div>
@@ -881,10 +890,10 @@
 
 	<div id="unaccompaniedChild" class="modal">
 
-		<a href="#unaccompaniedChildLink" class="background"></a>
+		<a onclick="hideModal('unaccompaniedChild')" class="background"></a>
 
 		<div>
-			<a href="#unaccompaniedChildLink" title="close" class="close">&times;</a>
+			<a onclick="hideModal('unaccompaniedChild')" title="close" class="close">&times;</a>
 			<h2>Unaccompanied child</h2>
 			<p>The Committee for the Rights of the Child defines unaccompanied migrant children (UMC) as children who have been separated from both parents and other relatives and are not being cared for by an adult who, by law or custom, is responsible for doing so.</p>
 			<p>Early coordination between NRMs in CoD and CoO is implemented to perform the child best interest assessment and determination (BIAD).</p>
@@ -894,10 +903,10 @@
 
 	<div id="familyTracingAndAssessment" class="modal">
 
-		<a href="#familyTracingAndAssessmentLink" class="background"></a>
+		<a onclick="hideModal('familyTracingAndAssessment')" class="background"></a>
 
 		<div>
-			<a href="#familyTracingAndAssessmentLink" title="close" class="close">&times;</a>
+			<a onclick="hideModal('familyTracingAndAssessment')" title="close" class="close">&times;</a>
 			<h2>Family tracing and assessment</h2>
 			<p>This assessment is made in the country of return by local organizations which meet with the family members and community representatives to collect information on the socio-economic situation of the family to evaluate what might be the best options for the child in the short and medium-term.</p>
 		</div>
@@ -906,10 +915,10 @@
 
 	<div id="BestInterestDetermination" class="modal">
 
-		<a href="#BestInterestDeterminationLink" class="background"></a>
+		<a onclick="hideModal('BestInterestDetermination')" class="background"></a>
 
 		<div>
-			<a href="#BestInterestDeterminationLink" title="close" class="close">&times;</a>
+			<a onclick="hideModal('BestInterestDetermination')" title="close" class="close">&times;</a>
 			<h2>Best interest assessment and determination</h2>
 			<p>The return of a child VoT can be envisaged only if it has been determined as being in his/her best interest so by the competent authority in the CoD during the BIAD. In case of a return, two main options should be explored:</p>
 			<p>- family reunification: based on the conclusions of the family tracing and assessment performed during the BIAD</p>
@@ -920,10 +929,10 @@
 
 	<div id="stayInTheCountryOfDestination" class="modal">
 
-		<a href="#stayInTheCountryOfDestinationLink" class="background"></a>
+		<a onclick="hideModal('stayInTheCountryOfDestination')" class="background"></a>
 
 		<div>
-			<a href="#stayInTheCountryOfDestinationLink" title="close" class="close">&times;</a>
+			<a onclick="hideModal('stayInTheCountryOfDestination')" title="close" class="close">&times;</a>
 			<h2>Stay in country of destination</h2>
 			<p>The risk and needs assessment should be performed as soon as the return is envisaged by the victim, and with no consequence if the s/he decides after this process to stay in the country of destination:</p>
 			<p>- because the risks assessment shows that the return is not safe enough</p>
@@ -934,10 +943,10 @@
 
 	<div id="ContactDetailsAreShared" class="modal">
 
-		<a href="#ContactDetailsAreSharedLink" class="background"></a>
+		<a onclick="hideModal('ContactDetailsAreShared')" class="background"></a>
 
 		<div>
-			<a href="#ContactDetailsAreSharedLink" title="close" class="close">&times;</a>
+			<a onclick="hideModal('ContactDetailsAreShared')" title="close" class="close">&times;</a>
 			<h2>Contact details are shared</h2>
 			<p>The victim should receive a booklet with useful contacts and the contact details of the person in charge of reception/arrival assistance.</p>
 			<p>S/he should be encouraged to provide contact details in order to facilitate follow-up upon arrival. For this, establishment of trustful relationships should be built before departure in CoD.</p>
@@ -947,10 +956,10 @@
 
 	<div id="travelToCountryOfOrigin" class="modal">
 
-		<a href="#travelToCountryOfOriginLink" class="background"></a>
+		<a onclick="hideModal('travelToCountryOfOrigin')" class="background"></a>
 
 		<div>
-			<a href="#travelToCountryOfOriginLink" title="close" class="close">&times;</a>
+			<a onclick="hideModal('travelToCountryOfOrigin')" title="close" class="close">&times;</a>
 			<h2>Travel to country of origin</h2>
 			<p>Travel arrangement includes:</br>
 			- Obtention of travel documents</p>
@@ -962,10 +971,10 @@
 
 	<div id="atTheAirport" class="modal">
 
-		<a href="#atTheAirportLink" class="background"></a>
+		<a onclick="hideModal('atTheAirport')" class="background"></a>
 
 		<div>
-			<a href="#atTheAirportLink" title="close" class="close">&times;</a>
+			<a onclick="hideModal('atTheAirport')" title="close" class="close">&times;</a>
 			<h2>At the airport</h2>
 			<p>Arrival assistance helps going through immigration controls at the airport.</p>
 			<p>Attention: arrival assistance is organized upon consent of the victim only. Indeed sometimes family members come to pick-up the person and are not aware of the experience suffered abroad.</p>
@@ -976,10 +985,10 @@
 
 	<div id="immediateNeeds" class="modal">
 
-		<a href="#immediateNeedsLink" class="background"></a>
+		<a onclick="hideModal('immediateNeeds')" class="background"></a>
 
 		<div>
-			<a href="#immediateNeedsLink" title="close" class="close">&times;</a>
+			<a onclick="hideModal('immediateNeeds')" title="close" class="close">&times;</a>
 			<h2>Immediate needs</h2>
 			<p>Immediate needs include : temporary accommodation, medical check-up, subsistance allowance (clothes, food)</p>
 		</div>
@@ -988,10 +997,10 @@
 
 	<div id="established" class="modal">
 
-		<a href="#establishedLink" class="background"></a>
+		<a onclick="hideModal('established')" class="background"></a>
 
 		<div>
-			<a href="#establishedLink" title="close" class="close">&times;</a>
+			<a onclick="hideModal('established')" title="close" class="close">&times;</a>
 			<h2>Established</h2>
 			<p>One caseworker within NRM stakeholders should be in charge of the individual assistance of the VoT in order to avoid having too many persons involved and having the victim repeting several time his/her story. This referent caseworker will then report to other NRM stakeholders.</p>
 		</div>
@@ -1000,10 +1009,10 @@
 
 	<div id="availableOpportunities" class="modal">
 
-		<a href="#availableOpportunitiesLink" class="background"></a>
+		<a onclick="hideModal('availableOpportunities')" class="background"></a>
 
 		<div>
-			<a href="#availableOpportunitiesLink" title="close" class="close">&times;</a>
+			<a onclick="hideModal('availableOpportunities')" title="close" class="close">&times;</a>
 			<h2>Available opportunities</h2>
 			<p>Opportunities vary depending on the country of return and programmes available locally.</p>
 		</div>
@@ -1012,10 +1021,10 @@
 
 	<div id="AccessToJustice" class="modal">
 
-		<a href="#AccessToJusticeLink" class="background"></a>
+		<a onclick="hideModal('AccessToJustice')" class="background"></a>
 
 		<div>
-			<a href="#AccessToJusticeLink" title="close" class="close">&times;</a>
+			<a onclick="hideModal('AccessToJustice')" title="close" class="close">&times;</a>
 			<h2>Access to justice</h2>
 			<p>Cooperation between judiciary systems in CoD and CoO is key.</p>
 			<p>Possibility to travel to CoD in the framework of judiciary procedures and to get compensations should be explored. </p>
