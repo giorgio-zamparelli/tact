@@ -1,2 +1,561 @@
-<h1>Resources</h1>
-<p>Coming soon</p>
+<!DOCTYPE html>
+<html>
+<head>
+
+	<style>
+
+		body {
+			background-color:#f2f2f2;
+		}
+
+		#queryInput, #typeSelectInput, #thematicSelectInput {
+			margin-right:11px;
+		}
+
+		input, select {
+			height: 42px;
+			padding: 0px;
+			font-size: 21px;
+			border-style: none;
+			padding: 0 14.5px;
+		}
+
+		select {
+			font-size: 14px;
+			width: 120px;
+			background-color: white;
+			-webkit-appearance: none;
+  			-webkit-border-radius: 0px;
+			text-align: center;
+			text-align-last:center;
+			cursor: pointer;
+		}
+
+		.reference {
+			color: #666666;
+			font-size: 18.67px;
+			margin-top:22px;
+		}
+
+		.reference .label {
+			color: black;
+		}
+
+		.title {
+			font-weight: bold;
+			text-transform: uppercase;
+		}
+
+		.title, .publisher, .languages, .thematic, .type, .link {
+			margin-bottom: 12px;
+		}
+
+		.abstract {
+			background-color: white;
+			padding: 18px;
+      text-align: justify;
+      text-justify: inter-word;
+		}
+
+		.image {
+			margin: 0 18px 18px 0;
+		}
+
+		.link {
+			color: inherit;
+		}
+
+	</style>
+
+<link href="./main.css" media="all" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+	<div style="display:flex;flex-direction:column;">
+
+		<div style="position: fixed;top: 0;left: 0;width: 100%;z-index: 999;">
+
+			<div style="display:flex;background-color:white;">
+				<div class="flex justify-content-center" style="width:232px;min-width:232px;max-width:232px;text-align:center;"><img src="tact-logo.svg" style="height:84px;margin-top:40px;" /></div>
+				<div style="flex-grow:1;color:#0b69aa;display:flex;flex-direction:column;padding:18px 0 0 0;">
+					<div><img src="tact-title.svg" style="height:30px;"></div>
+					<div style="font-size:21px;">Transnational referral mechanism Model</div>
+					<div style="height:3px;background-color:#0b69aa;margin:10px 0 0 0;"></div>
+					<div style="display:flex;font-size:21px;text-align:center;">
+						<a class="menu-button" href="./">HOME</a>
+						<a class="menu-button" href="./about-trm.html">ABOUT TRM</a>
+						<a class="menu-button" href="./ct-directory.html" >CT DIRECTORY</a>
+						<a class="menu-button" href="./tools.html" >TOOLS</a>
+						<a class="menu-button" href="./resources.html" style="color: #0b69aa;text-decoration:underline;">RESOURCES</a>
+						<a class="menu-button" href="./the-tact-project.html" >THE TACT PROJECT</a>
+					</div>
+
+				</div>
+				<div class="flex justify-content-center" style="width:232px;min-width:232px;max-width:232px;text-align:center;"><img src="iom-oim-logo.svg" style="height:84px;margin-top:40px;" /></div>
+			</div>
+
+		</div>
+
+		<div style="height:151px;"></div>
+
+		<div style="padding: 22px 232px;">
+			<div class="flex">
+				<input id="queryInput" type="text" class="flex-grow-one" placeholder="search" oninput="onInput(this.value)"/>
+				<select id="typeSelectInput" onchange="onSelectType(this)">
+					<option value="Type:">Type:</option>
+					<option value="Training manual">Training manual</option>
+					<option value="Publication">Publication</option>
+					<option value="Video">Video</option>
+					<option value="Guidelines">Guidelines</option>
+					<option value="Movie">Movie</option>
+					<option value="Manual / Handbook">Manual / Handbook</option>
+				</select>
+				<select id="thematicSelectInput" onchange="onSelectThematic(this)">
+					<option value="Thematic:">Thematic:</option>
+					<option value="Unaccompanied Migrant Children & Trafficking">Unaccompanied Migrant Children & Trafficking</option>
+					<option value="Policy & Legislation">Policy & Legislation</option>
+					<option value="Prevention, Protection and Assistance">Prevention, Protection and Assistance</option>
+					<option value="Law enforcement">Law enforcement</option>
+					<option value="Coordination & Cooperation (NRMs - TRMs)">Coordination & Cooperation (NRMs - TRMs)</option>
+					<option value="Manual / Handbook">Manual / Handbook</option>
+				</select>
+				<select id="languageSelectInput" onchange="onSelectLanguage(this)">
+					<option value="Language:">Language:</option>
+					<option value="Albanian">Albanian</option>
+					<option value="Bulgarian">Bulgarian</option>
+					<option value="Croatian">Croatian</option>
+					<option value="Czech">Czech</option>
+					<option value="Danish">Danish</option>
+					<option value="Dutch">Dutch</option>
+					<option value="English">English</option>
+					<option value="Estonian">Estonian</option>
+					<option value="Finnish">Finnish</option>
+					<option value="French">French</option>
+					<option value="German">German</option>
+					<option value="Greek">Greek</option>
+					<option value="Hungarian">Hungarian</option>
+					<option value="Irish">Irish</option>
+					<option value="Italian">Italian</option>
+					<option value="Latvian">Latvian</option>
+					<option value="Lithuanian">Lithuanian</option>
+					<option value="Maltese">Maltese</option>
+					<option value="Polish">Polish</option>
+					<option value="Portuguese">Portuguese</option>
+					<option value="Romanian">Romanian</option>
+					<option value="Slovak">Slovak</option>
+					<option value="Slovenian">Slovenian</option>
+					<option value="Spanish">Spanish</option>
+					<option value="Swedish">Swedish</option>
+				</select>
+			</div>
+			<div id="references">
+
+				<div class="reference">
+					<div class="flex">
+						<img class="image" src="./images/references/1_VEGA_Frontex_Children_at_risk.png" />
+						<div class="flex-column">
+							<div class="title">VEGA Handbook: Children at airport - Children at risk on the move , Guidelines for Border Guards</div>
+							<div class="publisher"><span class="label">Publisher: </span>Frontex, 2016</div>
+							<div class="languages"><span class="label">Languages available: </span>English</div>
+							<div class="thematic"><span class="label">Thematic: </span>Unaccompanied Migrant Children & Trafficking</div>
+							<div class="type"><span class="label">Type: </span>Training manual</div>
+							<a class="link" href="http://frontex.europa.eu/assets/Publications/Training/VEGA_Children_Handbook.pdf" target="_blank"><span class="label">Download PDF</span></a>
+						</div>
+					</div>
+					<div class="abstract">
+						<div class="label">ABSTRACT:</div>
+						The handbook is the result of years of cooperation between Frontex, border guards, non-governmental agencies and international organisations such as United Nations High Commissioner for Refugees (UNHCR) and International Organization for Migration (IOM) to create a set of guidelines for border guards to help assist children at risk.
+						<br/>
+						How can border guards and other people working at airports spot children who may be victims of trafficking? How does one talk to them? These are just a few questions answered in VEGA Handbook
+					</div>
+
+					<div style="width:100%;height:2px;background-color:#c3c3c3;margin:22px 0;"></div>
+
+				</div>
+
+
+
+				<div class="reference">
+					<div class="flex">
+						<img class="image" src="./images/references/2_Providing_effective_remerdies_for_VoTs_ICAT.png" />
+						<div class="flex-column">
+							<div class="title">Providing Effective Remedies for Victims of Trafficking in Persons</div>
+							<div class="publisher"><span class="label">Publisher: </span>ICAT, 2016</div>
+							<div class="languages"><span class="label">Languages available: </span>English, French, Arabic</div>
+							<div class="thematic"><span class="label">Thematic: </span>Policy & Legislation</div>
+							<div class="type"><span class="label">Type: </span>Publication</div>
+							<a class="link" href="http://icat.network/sites/default/files/publications/documents/Ebook%20ENG_0.pdf" target="_blank"><span class="label">Visit ICAT Website</span></a>
+						</div>
+					</div>
+					<div class="abstract">
+						<div class="label">ABSTRACT:</div>
+						This ICAT issue paper argues that access to remedies for trafficking victims should be a core component of efforts to address human trafficking, and provides illustrative examples of effective remedies and limitations that currently exist in different jurisdictions. Effective access to remedies is important not only for victims' recovery but also for reaffirming their rights and preventing re-victimisation. The paper also looks at the right to effective remedies for victims of human trafficking under international law, the scope of applying effective remedies, the challenges to providing remedies to victims at the national level, and offers practical recommendations to improve access to remedies (including specific recommendations for law and policy-makers, as well as non-State actors) and to facilitate related international cooperation.
+					</div>
+
+					<div style="width:100%;height:2px;background-color:#c3c3c3;margin:22px 0;"></div>
+
+				</div>
+
+				<div class="reference">
+					<div class="flex">
+						<img class="image" src="./images/references/3_film_Pas_a_vendre.png" />
+						<div class="flex-column">
+							<div class="title">Pas à vendre (Not for sale)</div>
+							<div class="publisher"><span class="label">Publisher: </span>IOM Tunisia, 2016</div>
+							<div class="languages"><span class="label">Languages available: </span>Arabic, French</div>
+							<div class="thematic"><span class="label">Thematic: </span>Prevention, Protection and Assistance</div>
+							<div class="type"><span class="label">Type: </span>Video</div>
+							<a class="link" href="https://www.youtube.com/watch?v=D1VATvucJGA" target="_blank"><span class="label">Watch video</span></a>
+						</div>
+					</div>
+					<div class="abstract">
+						<div class="label">ABSTRACT:</div>
+						An awareness-raising campaign against human trafficking entitled "Not for Sale" was launched in 2016 by IOM Tunisia in cooperation with the Tunisian Ministry of Justice. The campaign aims to raise awareness of the general public, especially young people, about the existence and extent of human trafficking in the country.
+					</div>
+
+					<div style="width:100%;height:2px;background-color:#c3c3c3;margin:22px 0;"></div>
+
+				</div>
+
+				<div class="reference">
+					<div class="flex">
+						<img class="image" src="./images/references/4_Salma_IOM_Lybia.png" />
+						<div class="flex-column">
+							<div class="title">Salma</div>
+							<div class="publisher"><span class="label">Publisher: </span>IOM Lybia, 2016</div>
+							<div class="languages"><span class="label">Languages available: </span>Arabic, English and French subtitles</div>
+							<div class="thematic"><span class="label">Thematic: </span>Prevention, Protection and Assistance</div>
+							<div class="type"><span class="label">Type: </span>Video</div>
+							<a class="link" href="https://www.youtube.com/watch?v=OLk74dWshmQ" target="_blank"><span class="label">Watch Video</span></a>
+						</div>
+					</div>
+					<div class="abstract">
+						<div class="label">ABSTRACT:</div>
+						A house maid went to Libya to work and earn a living. Before arriving to Libya, she was full of hope aiming to provide a better life for her beloved ones in her home country. However, the reality turned out to be different as she lost her freedom and dignity owing to degrading working conditions.
+					</div>
+
+					<div style="width:100%;height:2px;background-color:#c3c3c3;margin:22px 0;"></div>
+
+				</div>
+
+				<div class="reference">
+					<div class="flex">
+						<img class="image" src="./images/references/5_TRACE_handbook_for_policy_makers.png" />
+						<div class="flex-column">
+							<div class="title">Trace Human Trafficking - A handbook for policy makers, law enforcement agencies and civil society organizations</div>
+							<div class="publisher"><span class="label">Publisher: </span>Trace project consortium, 2016</div>
+							<div class="languages"><span class="label">Languages available: </span>English</div>
+							<div class="thematic"><span class="label">Thematic: </span>Law enforcement</div>
+							<div class="type"><span class="label">Type: </span>Publication</div>
+							<div class="link"><a class="link" href="http://trace-project.eu/" target="_blank"><span class="label">Visit website</span></a>&nbsp;&nbsp;<a href="http://trace-project.eu/wp-content/uploads/2016/05/TRACE_handbook.pdf" target="_blank"><span class="label">Download PDF</span></a></div>
+						</div>
+					</div>
+					<div class="abstract">
+						<div class="label">ABSTRACT:</div>
+						This handbook aims to support stakeholders by assessing and consolidating information about traffickers and trafficked persons, the wider criminal enterprise and its modus operandi, and the role of technology, as well as current and future trends. Understanding the crime within the broader context of the human trafficking enterprise can assist these three target groups in their efforts to effectively disrupt the human trafficking activities now and in the future.
+					</div>
+
+					<div style="width:100%;height:2px;background-color:#c3c3c3;margin:22px 0;"></div>
+
+				</div>
+
+				<div class="reference">
+					<div class="flex">
+						<img class="image" src="./images/references/6_National_Strategy_on_the_Fight_Against_THB_Albania.png" />
+						<div class="flex-column">
+							<div class="title">The National Strategy on the Fight Against Trafficking of Human Beings and the Trafficking of Children</div>
+							<div class="publisher"><span class="label">Publisher: </span>IOM Albania, 2016</div>
+							<div class="languages"><span class="label">Languages available: </span>Albanian, English</div>
+							<div class="thematic"><span class="label">Thematic: </span>Policy & Legislation</div>
+							<div class="type"><span class="label">Type: </span>Publication</div>
+							<a class="link" href="http://www.punetebrendshme.gov.al/files/priorities_files/16-04-19-04-28-19The_national_strategy_on_the_fight_against_trafficking_of_human_beings_and_the_trafficking_of_children.pdf" target="_blank"><span class="label">Download PDF</span></a>
+						</div>
+					</div>
+					<div class="abstract">
+						<div class="label">ABSTRACT:</div>
+						National Anti-trafficking Strategy of the Republic of Albania, including the National Action Plan for the period 2014-2017
+					</div>
+
+					<div style="width:100%;height:2px;background-color:#c3c3c3;margin:22px 0;"></div>
+
+				</div>
+
+				<div class="reference">
+					<div class="flex">
+						<img class="image" src="./images/references/7_NAP_socio_economic_reintegration_of_womed_and_girls_VoTs_Albania.png" />
+						<div class="flex-column">
+							<div class="title">National Action Plan for the Socio-Economic Re-Integration of Women and Girls Victims of Trafficking in the Republic of Albania</div>
+							<div class="publisher"><span class="label">Publisher: </span>IOM Albania, 2016</div>
+							<div class="languages"><span class="label">Languages available: </span>Albanian, English</div>
+							<div class="thematic"><span class="label">Thematic: </span>Coordination & Cooperation (NRMs - TRMs)</div>
+							<div class="type"><span class="label">Type: </span>Publication</div>
+							<a class="link" href="http://www.albania.iom.int/publications/brochures/Brochure-Ministry%20of%20Foreign%20Affairs%20in%20support%20of%20VoTs%20-%20ENG.pdf" target="_blank"><span class="label">Download PDF</span></a>
+						</div>
+					</div>
+					<div class="abstract">
+						<div class="label">ABSTRACT:</div>
+						The Strategy provides that action should be taken to draft an action plan on the re-integration of VoT and PVoT and highlights that some of its goals in relation to reintegration assistance to trafficked persons are largely dependent on a range of sector and cross-sector policies, including in the fields of education, employment, social inclusion and social protection, development and integration, gender, domestic violence, child protection and anti-discrimination
+					</div>
+
+					<div style="width:100%;height:2px;background-color:#c3c3c3;margin:22px 0;"></div>
+
+				</div>
+
+				<div class="reference">
+					<div class="flex">
+						<img class="image" src="./images/references/8_Study_of_prevention_initiatives_on_THB.png" />
+						<div class="flex-column">
+							<div class="title">Study of Prevention Initiatives on Trafficking in Human Beings</div>
+							<div class="publisher"><span class="label">Publisher: </span>European Commission, 2015</div>
+							<div class="languages"><span class="label">Languages available: </span>English</div>
+							<div class="thematic"><span class="label">Thematic: </span>Prevention, Protection and Assistance</div>
+							<div class="type"><span class="label">Type: </span>Publication</div>
+							<a class="link" href="https://ec.europa.eu/anti-trafficking/sites/antitrafficking/files/study_on_prevention_initiatives_on_trafficking_in_human_beings_0.pdf" target="_blank"><span class="label">Download PDF</span></a>
+						</div>
+					</div>
+					<div class="abstract">
+						<div class="label">ABSTRACT:</div>
+						The study examined 43 prevention initiatives, of which a share of 40% concerned actions in Romania, Bulgaria and Hungary. The vast majority of the (cca 85 %) in the given sample targeted information and awareness‑raising measures, followed by capacity‑building and research and education programmes. Among the key findings of the study is that there is no go-standard for assessing the impact of prevention actions but rather a comprehensive and contextual approach should be followed.
+					</div>
+
+					<div style="width:100%;height:2px;background-color:#c3c3c3;margin:22px 0;"></div>
+
+				</div>
+
+				<div class="reference">
+					<div class="flex">
+						<img class="image" src="./images/references/9_Guardianship_for_children_deprived_of_parental_care.png" />
+						<div class="flex-column">
+							<div class="title">Guardianship for children deprived of parental care - A handbook to reinforce guardianship systems to cater for the specific needs of child victims of trafficking</div>
+							<div class="publisher"><span class="label">Publisher: </span>EU Fundamental Rights Agency, 2015</div>
+							<div class="languages"><span class="label">Languages available: </span>English</div>
+							<div class="thematic"><span class="label">Thematic: </span>Unaccompanied Migrant Children & Trafficking</div>
+							<div class="type"><span class="label">Type: </span>Guidelines</div>
+							<a class="link" href="http://fra.europa.eu/sites/default/files/fra_uploads/fra-2014-guardianship-children_en.pdf" target="_blank"><span class="label">Download PDF</span></a>
+						</div>
+					</div>
+					<div class="abstract">
+						<div class="label">ABSTRACT:</div>
+						The research looks at how existing systems respond to the particular needs and vulnerabilities of presumed or identified child victims, or children at risk of trafficking and exploitation, such as unaccompanied children. This comparative report helps to understand better the strengths and weaknesses of national guardianship systems and may also assist decision makers to take measures to promote the effective protection of all children.
+					</div>
+
+					<div style="width:100%;height:2px;background-color:#c3c3c3;margin:22px 0;"></div>
+
+				</div>
+
+				<div class="reference">
+					<div class="flex">
+						<img class="image" src="./images/references/10_Ravot_Manual.png" />
+						<div class="flex-column">
+							<div class="title">Information Manual on the Transnational Referral Mechanism for Victims of Human Trafficking in Belgium, the Netherlands and Hungary</div>
+							<div class="publisher"><span class="label">Publisher: </span>Ministry of Interior of Hungary, 2015</div>
+							<div class="languages"><span class="label">Languages available: </span>Hungarian, French, Dutch, English</div>
+							<div class="thematic"><span class="label">Thematic: </span>Coordination & Cooperation (NRMs - TRMs)</div>
+							<div class="type"><span class="label">Type: </span>Publication</div>
+							<a class="link" href="http://www.ravot-eur.eu/en/relevant-pages-knowledge-base" target="_blank"><span class="label">Visit Ravot-Eur project website</span></a>
+						</div>
+					</div>
+					<div class="abstract">
+						<div class="label">ABSTRACT:</div>
+						This manual therefore primarily offers information on what human trafficking is and how the national referral mechanisms of Belgium, the Netherlands and Hungary work and what the linkages between them are.
+						<br/>It provides practical information for experts involved in the identification, referral and assistance of victims of human trafficking on the nature of human trafficking as well as effective ways of victims’ referral and assistance.
+					</div>
+
+					<div style="width:100%;height:2px;background-color:#c3c3c3;margin:22px 0;"></div>
+
+				</div>
+
+				<div class="reference">
+					<div class="flex">
+						<img class="image" src="./images/references/11_Life_beyond_trafficking.png" />
+						<div class="flex-column">
+							<div class="title">Life beyond trafficking - The re/integration of trafficked persons in the Balkans 2007-2014</div>
+							<div class="publisher"><span class="label">Publisher: </span>Kind Baudouin Foundation, 2015</div>
+							<div class="languages"><span class="label">Languages available: </span>English</div>
+							<div class="thematic"><span class="label">Thematic: </span>Prevention, Protection and Assistance</div>
+							<div class="type"><span class="label">Type: </span>Publication</div>
+							<a class="link" href="https://www.kbs-frb.be/en/Activities/Publications/2015/316546" target="_blank"><span class="label">Visit website</span></a>
+						</div>
+					</div>
+					<div class="abstract">
+						<div class="label">ABSTRACT:</div>
+						This booklet aims to highlight the main results and impact of the King Baudouin Foundation's project "Trafficking Victims Re/integration programme" in the lives of trafficked persons as well as more generally in the field of re/integration in the Balkans. It summarises the overall assessment conducted in 2014 through interviews of beneficiaries, partner NGOs, experts and government officials as well as other sources of data.
+					</div>
+
+					<div style="width:100%;height:2px;background-color:#c3c3c3;margin:22px 0;"></div>
+
+				</div>
+
+				<!--<div class="reference">
+					<div class="flex">
+						<img class="image" src="./images/references/" />
+						<div class="flex-column">
+							<div class="title"></div>
+							<div class="publisher"><span class="label">Publisher: </span>,</div>
+							<div class="languages"><span class="label">Languages available: </span></div>
+							<div class="thematic"><span class="label">Thematic: </span></div>
+							<div class="type"><span class="label">Type: </span></div>
+							<a class="link" href="" target="_blank"><span class="label">Visit Website</span></a>
+						</div>
+					</div>
+					<div class="abstract">
+						<div class="label">ABSTRACT:</div>
+
+					</div>
+
+					<div style="width:100%;height:2px;background-color:#c3c3c3;margin:22px 0;"></div>
+
+				</div> -->
+
+				<div class="reference">
+					<div class="flex">
+						<img class="image" src="./images/references/34_EU_strategy.png" />
+						<div class="flex-column">
+							<div class="title">EU Strategy towards the Eradication of Trafficking in Human Beings (2012-2016)</div>
+							<div class="publisher"><span class="label">Publisher: </span>European Commission, 2012</div>
+							<div class="languages"><span class="label">Languages available: </span>All EU  languages</div>
+							<div class="thematic"><span class="label">Thematic: </span>Policy & Legislation</div>
+							<div class="type"><span class="label">Type: </span>Publication</div>
+							<a class="link" href="http://ec.europa.eu/dgs/home-affairs/e-library/docs/thb_victims_rights/thb_victims_rights_en.pdf" target="_blank"><span class="label">Visit Website</span></a>
+						</div>
+					</div>
+					<div class="abstract">
+						<div class="label">ABSTRACT:</div>
+						On 19 June 2012, the European Commission adopted the "EU Strategy towards the Eradication of Trafficking in Human Beings (2012-2016)”.
+						The Strategy is a set of concrete and practical measures to be implemented over the next five years.
+						It is based on five key priorities:<br/>
+						 - Identifying, protecting and assisting victims of trafficking;<br/>
+						 - Stepping up the prevention of trafficking in human beings;<br/>
+						 - Increased prosecution of traffickers;<br/>
+						 - Enhanced coordination and cooperation among key actors and policy coherence;<br/>
+						 - Increased knowledge of and effective response to emerging concerns related to all forms of trafficking in human beings.
+					</div>
+
+					<div style="width:100%;height:2px;background-color:#c3c3c3;margin:22px 0;"></div>
+
+				</div>
+
+				<div class="reference">
+					<div class="flex">
+						<img class="image" src="./images/references/38_Directive_201136_UE.png" />
+						<div class="flex-column">
+							<div class="title">Directive 2011/36/EU of the European Parliament and the Council on preventing and combating trafficking in human beings and protecting its victims</div>
+							<div class="publisher"><span class="label">Publisher: </span>Official Journal of the European Union, 2011</div>
+							<div class="languages"><span class="label">Languages available: </span>Bulgarian, Croatian, Czech, Danish, Dutch, English, Estonian, Finnish, French, German, Greek, Hungarian, Irish, Italian, Latvian, Lithuanian, Maltese, Polish, Portuguese, Romanian, Slovak, Slovenian, Spanish, Swedish</div>
+							<div class="thematic"><span class="label">Thematic: </span>Policy & Legislation</div>
+							<div class="type"><span class="label">Type: </span>Legislation</div>
+							<a class="link" href="http://ec.europa.eu/dgs/home-affairs/e-library/docs/thb_victims_rights/thb_victims_rights_en.pdf" target="_blank"><span class="label">Visit Website</span></a>
+						</div>
+					</div>
+					<div class="abstract">
+						<div class="label">ABSTRACT:</div>This directive represents a critical step in the EU efforts in addressing human trafficking comprehensively.  It establishes common standards for the prevention of trafficking in human beings and for the protection of victims, adopting a human-right based approach.
+						The directive also contains practical measures to be implemented in the EU member stats, such as the appointment of a national coordinator and establishment of national rapporteur (or equivalent mechanism).
+					</div>
+
+					<div style="width:100%;height:2px;background-color:#c3c3c3;margin:22px 0;"></div>
+
+				</div>
+
+			</div>
+		</div>
+    <div class="flex-column" style="text-align:center;padding:28px 22px 22px 22px;background-color: white;">
+			<div>This project is funded by the EU Asylum, Migration and Integration Fund</div>
+			<img src="european-flag.svg" style="height:80px;margin-top:24px;">
+		</div>
+
+	</div>
+
+	<script>
+
+		var queryInput = document.getElementById('queryInput');
+		var queryInput = document.getElementById('queryInput');
+		var references = [].slice.call(document.getElementsByClassName('reference'));
+
+		function onSelectType (typeSelectInput) {
+
+			if (typeSelectInput.selectedIndex !== 0) {
+
+				var query = typeSelectInput.value;
+				queryInput.value = query;
+				onInput(query);
+				typeSelectInput.selectedIndex = 0;
+
+			}
+
+		}
+
+		function onSelectThematic (thematicSelectInput) {
+
+			if (thematicSelectInput.selectedIndex !== 0) {
+
+				var query = thematicSelectInput.value;
+				queryInput.value = query;
+				onInput(query);
+				thematicSelectInput.selectedIndex = 0;
+
+			}
+
+		}
+
+		function onSelectLanguage (languageSelectInput) {
+
+			if (languageSelectInput.selectedIndex !== 0) {
+
+				var query = languageSelectInput.value;
+				queryInput.value = query;
+				onInput(query);
+				languageSelectInput.selectedIndex = 0;
+
+			}
+
+		}
+
+		function onInput (query) {
+
+			var words = query.toLowerCase().split(' ');
+
+			references.map(function (reference) {
+
+				var visible = true;
+
+				if (words && words.length) {
+
+					var title = reference.getElementsByTagName('div')[0].getElementsByTagName('div')[0].getElementsByClassName('title')[0].innerHTML.toLowerCase();
+					var publisher = reference.getElementsByTagName('div')[0].getElementsByTagName('div')[0].getElementsByClassName('publisher')[0].innerHTML.toLowerCase();
+					var abstract = reference.getElementsByClassName('abstract')[0].innerHTML.toLowerCase();
+					var languages = reference.getElementsByTagName('div')[0].getElementsByTagName('div')[0].getElementsByClassName('languages')[0].innerHTML.toLowerCase();
+					var thematic = reference.getElementsByTagName('div')[0].getElementsByTagName('div')[0].getElementsByClassName('thematic')[0].innerHTML.toLowerCase();
+					var type = reference.getElementsByTagName('div')[0].getElementsByTagName('div')[0].getElementsByClassName('type')[0].innerHTML.toLowerCase();
+
+					var i = 0;
+					while (visible && i < words.length) {
+
+						visible = search(words[i], title) || search(words[i], publisher) || search(words[i], abstract) || search(words[i], languages) || search(words[i], thematic) || search(words[i], type);
+
+						i++;
+
+					}
+
+				}
+
+				if (visible) {
+					reference.style.display = 'block';
+				} else {
+					reference.style.display = 'none';
+				}
+
+			})
+
+		}
+
+		function search (needle, haystack) {
+			return simpleSearch(needle, haystack);
+		}
+
+		function simpleSearch (needle, haystack) {
+			return haystack.indexOf(needle) !== -1;
+		}
+
+	</script>
+</body>
+</html>
