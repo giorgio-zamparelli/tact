@@ -56,6 +56,8 @@ html, body {
 .icon-globe:before{content:'\004e';}
 .icon-family:before{content:'\004f';}
 .icon-balance:before{content:'\0050';}
+.icon-light-bulb:before{content:'\0051';}
+.icon-warning:before{content:'\0052';}
 
 .separator-horizontal {
 	background-color:white;
