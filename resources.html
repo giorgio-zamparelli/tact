@@ -162,8 +162,7 @@
 							<div class="languages"><span class="label">Languages available: </span>English</div>
 							<div class="thematic"><span class="label">Thematic: </span>Unaccompanied Migrant Children & Trafficking</div>
 							<div class="type"><span class="label">Type: </span>Training manual</div>
-							<div class="link">
-								<a class="link" href="http://frontex.europa.eu/assets/Publications/Training/VEGA_Children_Handbook.pdf" target="_blank"><span class="label">Download PDF</span></a>		</div>
+							<div class="link"><a class="link" href="http://frontex.europa.eu/assets/Publications/Training/VEGA_Children_Handbook.pdf" target="_blank"><span class="label">Download PDF</span></a></div>
 						</div>
 					</div>
 					<div class="abstract">
@@ -745,8 +744,7 @@
 						<div class="flex-column">
 							<div class="title">Practical tool for first level identification of victims of human trafficking for forced begging and illicit activities</div>
 							<div class="publisher"><span class="label">Publisher: </span>France Expertise Internationale, 2013</div>
-							<div class="languages"><span class="label">Languages available: </span>English, French, Spanish, Dutch, Romanian, Greek, Bulgarian
-</div>
+							<div class="languages"><span class="label">Languages available: </span>English, French, Spanish, Dutch, Romanian, Greek, Bulgarian</div>
 							<div class="thematic"><span class="label">Thematic: </span>Prevention, Protection and Assistance</div>
 							<div class="type"><span class="label">Type: </span>Training manual</div>
 							<div class="link">
@@ -773,7 +771,7 @@
 							<div class="type"><span class="label">Type: </span>Publication</div>
 							<div class="link">
 								<a class="link" href="http://www.accem.es/es/monograficos/-trata-de-seres-humanos-con-fines-de-explotacion/proyectos-de-accem
-Report available in 5 languages" target="_blank"><span class="label">Visit Website</span></a>&nbsp;&nbsp;
+								Report available in 5 languages" target="_blank"><span class="label">Visit Website</span></a>&nbsp;&nbsp;
 								<a class="link" href="http://www.accem.es/ficheros/documentos/pdf_trata/MIRROR_-_English.pdf" target="_blank"><span class="label">Download PDF</span></a>		</div>
 						</div>
 					</div>
@@ -790,15 +788,15 @@ Report available in 5 languages" target="_blank"><span class="label">Visit Websi
 					<div class="flex">
 						<img class="image" src="./images/references/67_national_integration_schemes.png" />
 						<div class="flex-column">
-							<div class="title">
-An overview of national integration schemes accessible to victims of trafficking and successful practices</div>
+							<div class="title">An overview of national integration schemes accessible to victims of trafficking and successful practices</div>
 							<div class="publisher"><span class="label">Publisher: </span>IOM France, 2013</div>
 							<div class="languages"><span class="label">Languages available: </span>English, French, Dutch, Hungarian, Italian</div>
 							<div class="thematic"><span class="label">Thematic: </span>Prevention, Protection and Assistance</div>
 							<div class="type"><span class="label">Type: </span>Guidelines</div>
 							<div class="link">
-								<a class="link" href="http://www.iomfrance.org/sites/default/files/FIIT%20Toolkit_ENG.pdf" target="_blank"><span class="label">Download PDF</span></a>		</div>
-								<a class="link" href="http://iomfrance.org/fiit" target="_blank"><span class="label">Visit website</span></a>		</div>
+								<a class="link" href="http://www.iomfrance.org/sites/default/files/FIIT%20Toolkit_ENG.pdf" target="_blank"><span class="label">Download PDF</span></a>
+								<a class="link" href="http://iomfrance.org/fiit" target="_blank"><span class="label">Visit website</span></a>
+							</div>
 						</div>
 					</div>
 					<div class="abstract">
@@ -827,7 +825,7 @@ An overview of national integration schemes accessible to victims of trafficking
 					<div class="abstract">
 						<div class="label">ABSTRACT:</div>
 						This document provides a practical and comprehensive overview of victims' rights based on the Charter of Fundamental Rights of the European Union, EU directives, framework decisions and European Court of Human Rights case law.
-This overview can be used by victims and practitioners working in the field of trafficking in human beings and aims at contributing to the effective realisation of these rights by helping authorities in the Member States to deliver the assistance and protection that victims need and deserve.
+						This overview can be used by victims and practitioners working in the field of trafficking in human beings and aims at contributing to the effective realisation of these rights by helping authorities in the Member States to deliver the assistance and protection that victims need and deserve.
 					</div>
 
 					<div style="width:100%;height:2px;background-color:#c3c3c3;margin:22px 0;"></div>
@@ -1057,7 +1055,7 @@ The directive also contains practical measures to be implemented in the EU membe
 							<div class="thematic"><span class="label">Thematic: </span>Coordination & Cooperation (NRMs - TRMs)</div>
 							<div class="type"><span class="label">Type: </span>Publication</div>
 							<div class="link">
-								<a class="link" href="http://www.iom.md/attachments/110_nrs_rep_2011_eng.pdf" target="_blank"><span class="label">Download PDF</span></a>		</div>
+								<a class="link" href="http://iomfrance.org/sites/default/files/Best%20practices%20in%20the%20implementation%20of%20NRMs_IOM%20Moldova.pdf" target="_blank"><span class="label">Download PDF</span></a>		</div>
 						</div>
 					</div>
 					<div class="abstract">
@@ -1734,6 +1732,10 @@ Even though the recommendations are focused on female victims, they apply also t
 				var visible = true;
 
 				if (words && words.length) {
+
+					if (!reference.getElementsByClassName('abstract')[0]) {
+						console.log(reference);
+					}
 
 					var title = reference.getElementsByTagName('div')[0].getElementsByTagName('div')[0].getElementsByClassName('title')[0].innerHTML.toLowerCase();
 					var publisher = reference.getElementsByTagName('div')[0].getElementsByTagName('div')[0].getElementsByClassName('publisher')[0].innerHTML.toLowerCase();
